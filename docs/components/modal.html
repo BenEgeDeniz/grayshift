@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Modal - Grayshift Documentation</title>
+  <link rel="stylesheet" href="../css/grayshift.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap">
+  <style>
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    .sidebar { position: sticky; top: 1rem; max-height: calc(100vh - 2rem); overflow-y: auto; }
+    .sidebar .nav-link { padding: 0.5rem 1rem; display: block; text-decoration: none; border-radius: 0.375rem; margin-bottom: 0.25rem; color: var(--body-color); }
+    .sidebar .nav-link:hover, .sidebar .nav-link.active { background-color: var(--light-300); color: var(--headings-color); }
+    code { background-color: var(--light-300); padding: 0.125rem 0.375rem; border-radius: 0.25rem; font-size: 0.875em; }
+    pre { background-color: var(--dark-500); color: white; padding: 1rem; border-radius: 0.5rem; overflow-x: auto; }
+    pre code { background-color: transparent; padding: 0; color: white; }
+    .example-box { border: 2px dashed var(--light-400); padding: 2rem; border-radius: 0.5rem; margin-bottom: 1rem; }
+  </style>
+</head>
+<body>
+  <nav class="navbar lg:navbar-expand" style="background-color: var(--dark-500);">
+    <div class="container">
+      <a class="link-body me-5" href="../index.html" style="color: white; text-decoration: none;">
+        <strong style="margin-left: 0.5rem; font-size: 1.25rem;">Grayshift</strong>
+      </a>
+      <div class="collapse navbar-collapse lg:flex-grow-1" id="navbarNav">
+        <ul class="navbar-nav mb-3 lg:ms-auto lg:mb-0">
+          <li class="nav-item"><a class="nav-link" href="../index.html" style="color: white;">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="buttons.html" style="color: white;">Components</a></li>
+          <li class="nav-item"><a class="nav-link" href="../layout/containers.html" style="color: white;">Layout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container py-5">
+    <div class="row">
+      <div class="lg:col-3 mb-5 lg:mb-0">
+        <div class="sidebar">
+          <h5 class="mb-3">Components</h5>
+          <nav>
+            <a href="buttons.html" class="nav-link">Buttons</a>
+            <a href="forms.html" class="nav-link">Forms</a>
+            <a href="cards.html" class="nav-link">Cards</a>
+            <a href="navbar.html" class="nav-link">Navbar</a>
+            <a href="dropdown.html" class="nav-link">Dropdown</a>
+            <a href="modal.html" class="nav-link active">Modal</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="lg:col-9">
+        <h1 class="display-4 mb-4">Modal</h1>
+        <p class="fs-3 mb-5">Use modals to add dialogs for lightboxes, user notifications, or custom content.</p>
+
+        <div class="card mb-5">
+          <h2 class="fs-1 mb-3">Basic Modal</h2>
+          <p class="mb-3">Toggle a modal with <code>data-gs-toggle="modal"</code>:</p>
+          <div class="example-box">
+            <button class="btn btn-primary" data-gs-toggle="modal" data-gs-target="#exampleModal">
+              Launch Modal
+            </button>
+
+            <div class="modal" id="exampleModal" tabindex="-1">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h3 class="modal-title fs-1">Modal title</h3>
+                    <button type="button" class="btn-close" data-gs-dismiss="modal"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary" data-gs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <pre><code>&lt;button data-gs-toggle="modal" data-gs-target="#exampleModal"&gt;
+  Launch Modal
+&lt;/button&gt;
+
+&lt;div class="modal" id="exampleModal"&gt;
+  &lt;div class="modal-dialog"&gt;
+    &lt;div class="modal-content"&gt;
+      &lt;div class="modal-header"&gt;
+        &lt;h3&gt;Modal title&lt;/h3&gt;
+        &lt;button class="btn-close" data-gs-dismiss="modal"&gt;&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class="modal-body"&gt;Modal body text&lt;/div&gt;
+      &lt;div class="modal-footer"&gt;
+        &lt;button data-gs-dismiss="modal"&gt;Close&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <div class="card">
+          <h2 class="fs-1 mb-3">Modal Sizes</h2>
+          <p class="mb-3">Modals have optional sizes with <code>.modal-sm</code>, <code>.modal-lg</code>, and <code>.modal-xl</code>:</p>
+          <pre><code>&lt;div class="modal-dialog modal-lg"&gt;...&lt;/div&gt;</code></pre>
+        </div>
+
+        <div class="d-flex justify-content-between mt-5">
+          <a href="dropdown.html" class="btn btn-outline-primary">← Previous: Dropdown</a>
+          <a href="../layout/containers.html" class="btn btn-primary">Next: Containers →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/grayshift.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Navbar - Grayshift Documentation</title>
+  <link rel="stylesheet" href="../css/grayshift.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap">
+  <style>
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    .sidebar { position: sticky; top: 1rem; max-height: calc(100vh - 2rem); overflow-y: auto; }
+    .sidebar .nav-link { padding: 0.5rem 1rem; display: block; text-decoration: none; border-radius: 0.375rem; margin-bottom: 0.25rem; color: var(--body-color); }
+    .sidebar .nav-link:hover, .sidebar .nav-link.active { background-color: var(--light-300); color: var(--headings-color); }
+    code { background-color: var(--light-300); padding: 0.125rem 0.375rem; border-radius: 0.25rem; font-size: 0.875em; }
+    pre { background-color: var(--dark-500); color: white; padding: 1rem; border-radius: 0.5rem; overflow-x: auto; }
+    pre code { background-color: transparent; padding: 0; color: white; }
+    .example-box { border: 2px dashed var(--light-400); padding: 2rem; border-radius: 0.5rem; margin-bottom: 1rem; }
+  </style>
+</head>
+<body>
+  <nav class="navbar lg:navbar-expand" style="background-color: var(--dark-500);">
+    <div class="container">
+      <a class="link-body me-5" href="../index.html" style="color: white; text-decoration: none;">
+        <svg class="gi gi-grayshift" width="2.5rem" height="2.5rem" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15.501 3a3 3 0 0 1 2.598 1.5l3.5 6.063a3 3 0 0 1 0 3l-3.5 6.063a3 3 0 0 1-2.598 1.5H8.5a3 3 0 0 1-2.598-1.5l-3.5-6.063a3 3 0 0 1 0-3l3.5-6.063A3 3 0 0 1 8.5 3h7.001zm-.923 3h-5.1a1.5 1.5 0 0 0-1.299.75h0l-2.599 4.501a1.5 1.5 0 0 0 0 1.5h0l2.599 4.501a1.5 1.5 0 0 0 1.299.75h0 5.194a1.5 1.5 0 0 0 1.302-.755h0l2.575-4.499a.5.5 0 0 0-.434-.748h0-3.155a1 1 0 0 0-.867.502h0l-.645 1.123a.75.75 0 0 1-.65.377h0-1.442a.75.75 0 0 1-.649-.375h0l-.723-1.251a.75.75 0 0 1 0-.75h0l.723-1.252a.75.75 0 0 1 .65-.375h0l1.413.001a1 1 0 0 0 .895-.553h0l1.362-2.723A.5.5 0 0 0 14.578 6h0z"/>
+        </svg>
+        <strong style="margin-left: 0.5rem; font-size: 1.25rem;">Grayshift</strong>
+      </a>
+      <button class="navbar-toggler" data-gs-toggle="collapse" data-gs-target="#navbarNav" type="button" style="color: white;">
+        <svg class="gi gi-menu fs-5" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 6h16a1 1 0 1 1 0 2H4a1 1 0 1 1 0-2zm0 5h16a1 1 0 1 1 0 2H4a1 1 0 1 1 0-2zm0 5h16a1 1 0 1 1 0 2H4a1 1 0 1 1 0-2z"/>
+        </svg>
+      </button>
+      <div class="collapse navbar-collapse lg:flex-grow-1" id="navbarNav">
+        <ul class="navbar-nav mb-3 lg:ms-auto lg:mb-0">
+          <li class="nav-item"><a class="nav-link" href="../index.html" style="color: white;">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="../getting-started/introduction.html" style="color: white;">Getting Started</a></li>
+          <li class="nav-item"><a class="nav-link active" href="buttons.html" style="color: white;">Components</a></li>
+          <li class="nav-item"><a class="nav-link" href="../layout/containers.html" style="color: white;">Layout</a></li>
+          <li class="nav-item"><a class="nav-link" href="../examples/showcase.html" style="color: white;">Examples</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container py-5">
+    <div class="row">
+      <div class="lg:col-3 mb-5 lg:mb-0">
+        <div class="sidebar">
+          <h5 class="mb-3">Getting Started</h5>
+          <nav>
+            <a href="../getting-started/introduction.html" class="nav-link">Introduction</a>
+            <a href="../getting-started/installation.html" class="nav-link">Installation</a>
+            <a href="../getting-started/quick-start.html" class="nav-link">Quick Start</a>
+          </nav>
+          <h5 class="mb-3 mt-4">Components</h5>
+          <nav>
+            <a href="buttons.html" class="nav-link">Buttons</a>
+            <a href="forms.html" class="nav-link">Forms</a>
+            <a href="cards.html" class="nav-link">Cards</a>
+            <a href="navbar.html" class="nav-link active">Navbar</a>
+            <a href="dropdown.html" class="nav-link">Dropdown</a>
+            <a href="modal.html" class="nav-link">Modal</a>
+          </nav>
+          <h5 class="mb-3 mt-4">Layout</h5>
+          <nav>
+            <a href="../layout/containers.html" class="nav-link">Containers</a>
+            <a href="../layout/grid.html" class="nav-link">Grid System</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="lg:col-9">
+        <h1 class="display-4 mb-4">Navbar</h1>
+        <p class="fs-3 mb-5">Responsive navigation header with support for branding, navigation, and more.</p>
+
+        <div class="card mb-5">
+          <h2 class="fs-1 mb-3">Basic Navbar</h2>
+          <p class="mb-3">Create a responsive navbar with <code>.navbar</code> and <code>.navbar-expand</code>:</p>
+          <div class="example-box">
+            <nav class="navbar lg:navbar-expand" style="border-radius: .75rem;">
+              <div class="container lg:px-4">
+                <a class="link-body me-5" href="#">Brand</a>
+                <button class="navbar-toggler" data-gs-toggle="collapse" data-gs-target="#navbar1" type="button">
+                  <svg class="gi gi-menu fs-5" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 6h16a1 1 0 1 1 0 2H4a1 1 0 1 1 0-2zm0 5h16a1 1 0 1 1 0 2H4a1 1 0 1 1 0-2zm0 5h16a1 1 0 1 1 0 2H4a1 1 0 1 1 0-2z"/>
+                  </svg>
+                </button>
+                <div class="collapse navbar-collapse lg:flex-grow-1" id="navbar1">
+                  <ul class="navbar-nav mb-3 lg:mb-0">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Another Link</a></li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+          <pre><code>&lt;nav class="navbar lg:navbar-expand"&gt;
+  &lt;div class="container"&gt;
+    &lt;a class="link-body" href="#"&gt;Brand&lt;/a&gt;
+    &lt;button class="navbar-toggler" data-gs-toggle="collapse" data-gs-target="#navbar1"&gt;
+      &lt;svg class="gi gi-menu"&gt;...&lt;/svg&gt;
+    &lt;/button&gt;
+    &lt;div class="collapse navbar-collapse" id="navbar1"&gt;
+      &lt;ul class="navbar-nav"&gt;
+        &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+        </div>
+
+        <div class="card mb-5">
+          <h2 class="fs-1 mb-3">Navbar with Search</h2>
+          <p class="mb-3">Add a search form to your navbar:</p>
+          <pre><code>&lt;form&gt;
+  &lt;div class="input-group"&gt;
+    &lt;div class="input-group-item"&gt;
+      &lt;svg class="gi gi-search"&gt;...&lt;/svg&gt;
+    &lt;/div&gt;
+    &lt;input class="form-control" type="search" placeholder="Search"&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+
+        <div class="card mb-5">
+          <h2 class="fs-1 mb-3">Responsive Behavior</h2>
+          <p class="mb-3">The navbar collapses on small screens. Use these classes for different breakpoints:</p>
+          <ul>
+            <li><code>.md:navbar-expand</code> - Expands at medium screens</li>
+            <li><code>.lg:navbar-expand</code> - Expands at large screens (recommended)</li>
+            <li><code>.xl:navbar-expand</code> - Expands at extra large screens</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2 class="fs-1 mb-3">Color Schemes</h2>
+          <p class="mb-3">Customize navbar colors with inline styles or custom CSS:</p>
+          <pre><code>&lt;nav class="navbar" style="background-color: var(--dark-500); color: white;"&gt;
+  ...
+&lt;/nav&gt;</code></pre>
+        </div>
+
+        <div class="d-flex justify-content-between mt-5">
+          <a href="cards.html" class="btn btn-outline-primary">← Previous: Cards</a>
+          <a href="dropdown.html" class="btn btn-primary">Next: Dropdown →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/grayshift.min.js"></script>
+</body>
+</html>
