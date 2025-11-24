@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quick Start - Grayshift Documentation</title>
+  <link rel="stylesheet" href="../css/grayshift.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap">
+  <style>
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    .sidebar {
+      position: sticky;
+      top: 1rem;
+      max-height: calc(100vh - 2rem);
+      overflow-y: auto;
+    }
+    .sidebar .nav-link {
+      padding: 0.5rem 1rem;
+      display: block;
+      text-decoration: none;
+      border-radius: 0.375rem;
+      margin-bottom: 0.25rem;
+      color: var(--body-color);
+    }
+    .sidebar .nav-link:hover, .sidebar .nav-link.active {
+      background-color: var(--light-300);
+      color: var(--headings-color);
+    }
+    code {
+      background-color: var(--light-300);
+      padding: 0.125rem 0.375rem;
+      border-radius: 0.25rem;
+      font-size: 0.875em;
+      font-family: 'Courier New', monospace;
+    }
+    pre {
+      background-color: var(--dark-500);
+      color: white;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      overflow-x: auto;
+    }
+    pre code {
+      background-color: transparent;
+      padding: 0;
+      color: white;
+    }
+    .example-box {
+      border: 2px dashed var(--light-400);
+      padding: 2rem;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar lg:navbar-expand" style="background-color: var(--dark-500);">
+    <div class="container">
+      <a class="link-body me-5" href="../index.html" style="color: white; text-decoration: none;">
+        <svg class="gi gi-grayshift" width="2.5rem" height="2.5rem" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15.501 3a3 3 0 0 1 2.598 1.5l3.5 6.063a3 3 0 0 1 0 3l-3.5 6.063a3 3 0 0 1-2.598 1.5H8.5a3 3 0 0 1-2.598-1.5l-3.5-6.063a3 3 0 0 1 0-3l3.5-6.063A3 3 0 0 1 8.5 3h7.001zm-.923 3h-5.1a1.5 1.5 0 0 0-1.299.75h0l-2.599 4.501a1.5 1.5 0 0 0 0 1.5h0l2.599 4.501a1.5 1.5 0 0 0 1.299.75h0 5.194a1.5 1.5 0 0 0 1.302-.755h0l2.575-4.499a.5.5 0 0 0-.434-.748h0-3.155a1 1 0 0 0-.867.502h0l-.645 1.123a.75.75 0 0 1-.65.377h0-1.442a.75.75 0 0 1-.649-.375h0l-.723-1.251a.75.75 0 0 1 0-.75h0l.723-1.252a.75.75 0 0 1 .65-.375h0l1.413.001a1 1 0 0 0 .895-.553h0l1.362-2.723A.5.5 0 0 0 14.578 6h0z"/>
+        </svg>
+        <strong style="margin-left: 0.5rem; font-size: 1.25rem;">Grayshift</strong>
+      </a>
+      <button class="navbar-toggler" data-gs-toggle="collapse" data-gs-target="#navbarNav" type="button" style="color: white;">
+        <svg class="gi gi-menu fs-5" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 6h16a1 1 0 1 1 0 2H4a1 1 0 1 1 0-2zm0 5h16a1 1 0 1 1 0 2H4a1 1 0 1 1 0-2zm0 5h16a1 1 0 1 1 0 2H4a1 1 0 1 1 0-2z"/>
+        </svg>
+      </button>
+      <div class="collapse navbar-collapse lg:flex-grow-1" id="navbarNav">
+        <ul class="navbar-nav mb-3 lg:ms-auto lg:mb-0">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html" style="color: white;">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="introduction.html" style="color: white;">Getting Started</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../components/buttons.html" style="color: white;">Components</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../layout/containers.html" style="color: white;">Layout</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../examples/showcase.html" style="color: white;">Examples</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <div class="container py-5">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="lg:col-3 mb-5 lg:mb-0">
+        <div class="sidebar">
+          <h5 class="mb-3">Getting Started</h5>
+          <nav>
+            <a href="introduction.html" class="nav-link">Introduction</a>
+            <a href="installation.html" class="nav-link">Installation</a>
+            <a href="quick-start.html" class="nav-link active">Quick Start</a>
+          </nav>
+          <h5 class="mb-3 mt-4">Components</h5>
+          <nav>
+            <a href="../components/buttons.html" class="nav-link">Buttons</a>
+            <a href="../components/forms.html" class="nav-link">Forms</a>
+            <a href="../components/cards.html" class="nav-link">Cards</a>
+            <a href="../components/navbar.html" class="nav-link">Navbar</a>
+            <a href="../components/dropdown.html" class="nav-link">Dropdown</a>
+            <a href="../components/modal.html" class="nav-link">Modal</a>
+          </nav>
+          <h5 class="mb-3 mt-4">Layout</h5>
+          <nav>
+            <a href="../layout/containers.html" class="nav-link">Containers</a>
+            <a href="../layout/grid.html" class="nav-link">Grid System</a>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="lg:col-9">
+        <h1 class="display-4 mb-4">Quick Start</h1>
+        <p class="fs-3 mb-5">Get up and running with Grayshift in just a few minutes.</p>
+
+        <div class="card mb-5">
+          <h2 class="fs-1 mb-3">Basic Template</h2>
+          <p class="mb-3">Start with this basic HTML template that includes all necessary Grayshift files:</p>
+          <pre><code>&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;!-- Required meta tags --&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+
+  &lt;!-- Grayshift CSS --&gt;
+  &lt;link rel="stylesheet" href="path/to/grayshift.min.css"&gt;
+
+  &lt;!-- Optional: Google Fonts --&gt;
+  &lt;link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"&gt;
+
+  &lt;title&gt;Hello, Grayshift!&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class="container py-5"&gt;
+    &lt;h1&gt;Hello, Grayshift!&lt;/h1&gt;
+    &lt;p&gt;Get started with Grayshift.&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Grayshift JavaScript --&gt;
+  &lt;script src="path/to/grayshift.min.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+
+        <div class="card mb-5">
+          <h2 class="fs-1 mb-3">Your First Component</h2>
+          <p class="mb-3">Let's create a simple button:</p>
+          <div class="example-box">
+            <button class="btn btn-primary">Primary Button</button>
+          </div>
+          <pre><code>&lt;button class="btn btn-primary"&gt;Primary Button&lt;/button&gt;</code></pre>
+        </div>
+
+        <div class="card mb-5">
+          <h2 class="fs-1 mb-3">Using the Grid System</h2>
+          <p class="mb-3">Create responsive layouts with the grid system:</p>
+          <div class="example-box">
+            <div class="row">
+              <div class="md:col-6 mb-3 md:mb-0">
+                <div class="card">
+                  <h3 class="fs-2">Column 1</h3>
+                  <p class="mb-0">Half width on medium screens and up.</p>
+                </div>
+              </div>
+              <div class="md:col-6">
+                <div class="card">
+                  <h3 class="fs-2">Column 2</h3>
+                  <p class="mb-0">Half width on medium screens and up.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <pre><code>&lt;div class="row"&gt;
+  &lt;div class="md:col-6"&gt;
+    &lt;div class="card"&gt;
+      &lt;h3&gt;Column 1&lt;/h3&gt;
+      &lt;p&gt;Half width on medium screens and up.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="md:col-6"&gt;
+    &lt;div class="card"&gt;
+      &lt;h3&gt;Column 2&lt;/h3&gt;
+      &lt;p&gt;Half width on medium screens and up.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <div class="card mb-5">
+          <h2 class="fs-1 mb-3">Creating a Card</h2>
+          <p class="mb-3">Cards are flexible containers for content:</p>
+          <div class="example-box">
+            <div class="card" style="max-width: 400px;">
+              <h3 class="fs-1 mb-3">Card Title</h3>
+              <p class="mb-3">This is a simple card with a title and some text content. Cards are great for organizing related information.</p>
+              <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+          <pre><code>&lt;div class="card"&gt;
+  &lt;h3 class="fs-1 mb-3"&gt;Card Title&lt;/h3&gt;
+  &lt;p class="mb-3"&gt;This is a simple card with a title and some text content.&lt;/p&gt;
+  &lt;a href="#" class="btn btn-primary"&gt;Learn More&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <div class="card mb-5">
+          <h2 class="fs-1 mb-3">Customization</h2>
+          <p class="mb-3">To customize Grayshift, you can:</p>
+          <ol>
+            <li class="mb-2"><strong>Modify SCSS Variables:</strong> Edit <code>scss/_variables.scss</code> to change colors, spacing, and more</li>
+            <li class="mb-2"><strong>Override Styles:</strong> Add your own CSS after the Grayshift stylesheet</li>
+            <li class="mb-2"><strong>Use Utility Classes:</strong> Apply spacing, colors, and other utilities directly in HTML</li>
+          </ol>
+          
+          <h3 class="fs-2 mb-3 mt-4">Example: Custom Colors</h3>
+          <pre><code>// In your custom SCSS file
+$blue: #1e40af;
+$primary: var(--blue);
+
+@import "path/to/grayshift.scss";</code></pre>
+        </div>
+
+        <div class="card">
+          <h2 class="fs-1 mb-3">Next Steps</h2>
+          <p class="mb-3">Now that you've got the basics, explore more:</p>
+          <ul>
+            <li class="mb-2"><a href="../components/buttons.html">Browse all components</a></li>
+            <li class="mb-2"><a href="../layout/grid.html">Learn about the grid system</a></li>
+            <li class="mb-2"><a href="../utilities/helpers.html">Discover utility classes</a></li>
+            <li class="mb-2"><a href="../examples/showcase.html">View example pages</a></li>
+          </ul>
+        </div>
+
+        <div class="d-flex justify-content-between mt-5">
+          <a href="installation.html" class="btn btn-outline-primary">← Previous: Installation</a>
+          <a href="../components/buttons.html" class="btn btn-primary">Next: Components →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/grayshift.min.js"></script>
+</body>
+</html>

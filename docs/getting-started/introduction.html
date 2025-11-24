@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Introduction - Grayshift Documentation</title>
+  <link rel="stylesheet" href="../css/grayshift.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap">
+  <style>
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    .sidebar {
+      position: sticky;
+      top: 1rem;
+      max-height: calc(100vh - 2rem);
+      overflow-y: auto;
+    }
+    .sidebar .nav-link {
+      padding: 0.5rem 1rem;
+      display: block;
+      text-decoration: none;
+      border-radius: 0.375rem;
+      margin-bottom: 0.25rem;
+      color: var(--body-color);
+    }
+    .sidebar .nav-link:hover, .sidebar .nav-link.active {
+      background-color: var(--light-300);
+      color: var(--headings-color);
+    }
+    code {
+      background-color: var(--light-300);
+      padding: 0.125rem 0.375rem;
+      border-radius: 0.25rem;
+      font-size: 0.875em;
+      font-family: 'Courier New', monospace;
+    }
+    pre {
+      background-color: var(--dark-500);
+      color: white;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      overflow-x: auto;
+    }
+    pre code {
+      background-color: transparent;
+      padding: 0;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar lg:navbar-expand" style="background-color: var(--dark-500);">
+    <div class="container">
+      <a class="link-body me-5" href="../index.html" style="color: white; text-decoration: none;">
+        <svg class="gi gi-grayshift" width="2.5rem" height="2.5rem" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15.501 3a3 3 0 0 1 2.598 1.5l3.5 6.063a3 3 0 0 1 0 3l-3.5 6.063a3 3 0 0 1-2.598 1.5H8.5a3 3 0 0 1-2.598-1.5l-3.5-6.063a3 3 0 0 1 0-3l3.5-6.063A3 3 0 0 1 8.5 3h7.001zm-.923 3h-5.1a1.5 1.5 0 0 0-1.299.75h0l-2.599 4.501a1.5 1.5 0 0 0 0 1.5h0l2.599 4.501a1.5 1.5 0 0 0 1.299.75h0 5.194a1.5 1.5 0 0 0 1.302-.755h0l2.575-4.499a.5.5 0 0 0-.434-.748h0-3.155a1 1 0 0 0-.867.502h0l-.645 1.123a.75.75 0 0 1-.65.377h0-1.442a.75.75 0 0 1-.649-.375h0l-.723-1.251a.75.75 0 0 1 0-.75h0l.723-1.252a.75.75 0 0 1 .65-.375h0l1.413.001a1 1 0 0 0 .895-.553h0l1.362-2.723A.5.5 0 0 0 14.578 6h0z"/>
+        </svg>
+        <strong style="margin-left: 0.5rem; font-size: 1.25rem;">Grayshift</strong>
+      </a>
+      <button class="navbar-toggler" data-gs-toggle="collapse" data-gs-target="#navbarNav" type="button" style="color: white;">
+        <svg class="gi gi-menu fs-5" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 6h16a1 1 0 1 1 0 2H4a1 1 0 1 1 0-2zm0 5h16a1 1 0 1 1 0 2H4a1 1 0 1 1 0-2zm0 5h16a1 1 0 1 1 0 2H4a1 1 0 1 1 0-2z"/>
+        </svg>
+      </button>
+      <div class="collapse navbar-collapse lg:flex-grow-1" id="navbarNav">
+        <ul class="navbar-nav mb-3 lg:ms-auto lg:mb-0">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html" style="color: white;">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="introduction.html" style="color: white;">Getting Started</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../components/buttons.html" style="color: white;">Components</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../layout/containers.html" style="color: white;">Layout</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../examples/showcase.html" style="color: white;">Examples</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <div class="container py-5">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="lg:col-3 mb-5 lg:mb-0">
+        <div class="sidebar">
+          <h5 class="mb-3">Getting Started</h5>
+          <nav>
+            <a href="introduction.html" class="nav-link active">Introduction</a>
+            <a href="installation.html" class="nav-link">Installation</a>
+            <a href="quick-start.html" class="nav-link">Quick Start</a>
+          </nav>
+          <h5 class="mb-3 mt-4">Components</h5>
+          <nav>
+            <a href="../components/buttons.html" class="nav-link">Buttons</a>
+            <a href="../components/forms.html" class="nav-link">Forms</a>
+            <a href="../components/cards.html" class="nav-link">Cards</a>
+            <a href="../components/navbar.html" class="nav-link">Navbar</a>
+            <a href="../components/dropdown.html" class="nav-link">Dropdown</a>
+            <a href="../components/modal.html" class="nav-link">Modal</a>
+          </nav>
+          <h5 class="mb-3 mt-4">Layout</h5>
+          <nav>
+            <a href="../layout/containers.html" class="nav-link">Containers</a>
+            <a href="../layout/grid.html" class="nav-link">Grid System</a>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="lg:col-9">
+        <h1 class="display-4 mb-4">Introduction</h1>
+        <p class="fs-3 mb-5">Get started with Grayshift, a lightweight front-end component library for developing fast and powerful web interfaces.</p>
+
+        <div class="card mb-5">
+          <h2 class="fs-1 mb-3">What is Grayshift?</h2>
+          <p class="mb-3">Grayshift is a modern, lightweight front-end component library designed to help developers build beautiful and responsive web interfaces quickly. It provides a comprehensive collection of UI components, a flexible grid system, and utility classes that work seamlessly together.</p>
+          <p class="mb-0">Built with SCSS and vanilla JavaScript, Grayshift offers excellent performance with minimal overhead while maintaining maximum flexibility and customization options.</p>
+        </div>
+
+        <div class="card mb-5">
+          <h2 class="fs-1 mb-3">Key Features</h2>
+          <ul>
+            <li class="mb-2"><strong>Lightweight:</strong> Minimal file size with no unnecessary bloat</li>
+            <li class="mb-2"><strong>Responsive:</strong> Mobile-first design with responsive breakpoints</li>
+            <li class="mb-2"><strong>Customizable:</strong> Easy to customize with SCSS variables</li>
+            <li class="mb-2"><strong>Modern:</strong> Built with modern CSS and JavaScript</li>
+            <li class="mb-2"><strong>Accessible:</strong> ARIA-compliant components</li>
+            <li class="mb-2"><strong>Browser Support:</strong> Works in all modern browsers</li>
+          </ul>
+        </div>
+
+        <div class="card mb-5">
+          <h2 class="fs-1 mb-3">Browser Support</h2>
+          <p class="mb-3">Grayshift supports the latest, stable releases of all major browsers:</p>
+          <ul>
+            <li>Chrome (latest)</li>
+            <li>Firefox (latest)</li>
+            <li>Safari (latest)</li>
+            <li>Edge (latest)</li>
+            <li>Opera (latest)</li>
+          </ul>
+        </div>
+
+        <div class="card mb-5">
+          <h2 class="fs-1 mb-3">File Structure</h2>
+          <p class="mb-3">The Grayshift package includes the following structure:</p>
+          <pre><code>grayshift/
+├── dist/
+│   ├── css/
+│   │   ├── grayshift.css
+│   │   ├── grayshift.min.css
+│   │   └── ...
+│   └── js/
+│       ├── grayshift.js
+│       ├── grayshift.min.js
+│       └── ...
+├── scss/
+│   ├── _variables.scss
+│   ├── _mixins.scss
+│   ├── _buttons.scss
+│   └── ...
+├── js/
+│   └── ...
+└── examples/
+    └── ...</code></pre>
+        </div>
+
+        <div class="card mb-5">
+          <h2 class="fs-1 mb-3">Version</h2>
+          <p class="mb-0">Current version: <code>v1.0.2</code></p>
+          <p class="mt-3">Grayshift is maintained under the Semantic Versioning guidelines. See the <a href="https://github.com/yanchokraev/grayshift/releases">releases section</a> for changelogs.</p>
+        </div>
+
+        <div class="card">
+          <h2 class="fs-1 mb-3">License</h2>
+          <p class="mb-0">Grayshift is released under the <a href="https://opensource.org/licenses/mit-license.php">MIT License</a>. You are free to use it in personal and commercial projects.</p>
+        </div>
+
+        <div class="d-flex justify-content-between mt-5">
+          <div></div>
+          <a href="installation.html" class="btn btn-primary">Next: Installation →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/grayshift.min.js"></script>
+</body>
+</html>

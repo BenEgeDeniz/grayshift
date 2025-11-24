@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grayshift - Lightweight Front-End Component Library</title>
+  <link rel="stylesheet" href="css/grayshift.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap">
+  <style>
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    .hero {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 5rem 0;
+    }
+    .feature-card {
+      transition: transform 0.3s ease;
+    }
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+    .sidebar {
+      position: sticky;
+      top: 1rem;
+      max-height: calc(100vh - 2rem);
+      overflow-y: auto;
+    }
+    .nav-link {
+      padding: 0.5rem 1rem;
+      display: block;
+      text-decoration: none;
+      border-radius: 0.375rem;
+      margin-bottom: 0.25rem;
+    }
+    .nav-link:hover {
+      background-color: var(--light-300);
+    }
+    code {
+      background-color: var(--light-300);
+      padding: 0.125rem 0.375rem;
+      border-radius: 0.25rem;
+      font-size: 0.875em;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar lg:navbar-expand" style="background-color: var(--dark-500);">
+    <div class="container">
+      <a class="link-body me-5" href="index.html" style="color: white; text-decoration: none;">
+        <svg class="gi gi-grayshift" width="2.5rem" height="2.5rem" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15.501 3a3 3 0 0 1 2.598 1.5l3.5 6.063a3 3 0 0 1 0 3l-3.5 6.063a3 3 0 0 1-2.598 1.5H8.5a3 3 0 0 1-2.598-1.5l-3.5-6.063a3 3 0 0 1 0-3l3.5-6.063A3 3 0 0 1 8.5 3h7.001zm-.923 3h-5.1a1.5 1.5 0 0 0-1.299.75h0l-2.599 4.501a1.5 1.5 0 0 0 0 1.5h0l2.599 4.501a1.5 1.5 0 0 0 1.299.75h0 5.194a1.5 1.5 0 0 0 1.302-.755h0l2.575-4.499a.5.5 0 0 0-.434-.748h0-3.155a1 1 0 0 0-.867.502h0l-.645 1.123a.75.75 0 0 1-.65.377h0-1.442a.75.75 0 0 1-.649-.375h0l-.723-1.251a.75.75 0 0 1 0-.75h0l.723-1.252a.75.75 0 0 1 .65-.375h0l1.413.001a1 1 0 0 0 .895-.553h0l1.362-2.723A.5.5 0 0 0 14.578 6h0z"/>
+        </svg>
+        <strong style="margin-left: 0.5rem; font-size: 1.25rem;">Grayshift</strong>
+      </a>
+      <button class="navbar-toggler" data-gs-toggle="collapse" data-gs-target="#navbarNav" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle Navigation" style="color: white;">
+        <svg class="gi gi-menu fs-5" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 6h16a1 1 0 1 1 0 2H4a1 1 0 1 1 0-2zm0 5h16a1 1 0 1 1 0 2H4a1 1 0 1 1 0-2zm0 5h16a1 1 0 1 1 0 2H4a1 1 0 1 1 0-2z"/>
+        </svg>
+      </button>
+      <div class="collapse navbar-collapse lg:flex-grow-1" id="navbarNav">
+        <ul class="navbar-nav mb-3 lg:ms-auto lg:mb-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html" style="color: white;">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="getting-started/introduction.html" style="color: white;">Getting Started</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="components/buttons.html" style="color: white;">Components</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="layout/containers.html" style="color: white;">Layout</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="examples/showcase.html" style="color: white;">Examples</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero text-center">
+    <div class="container">
+      <h1 class="display-4 mb-4">Grayshift</h1>
+      <p class="fs-1 mb-5">A lightweight front-end component library for developing fast and powerful web interfaces.</p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a href="getting-started/introduction.html" class="btn btn-light btn-lg">Get Started</a>
+        <a href="components/buttons.html" class="btn btn-outline-light btn-lg">Browse Components</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features -->
+  <div class="py-6">
+    <div class="container">
+      <div class="row text-center mb-5">
+        <div class="col">
+          <h2 class="display-5 mb-3">Why Choose Grayshift?</h2>
+          <p class="fs-3">Modern, flexible, and easy to use component library</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="md:col-6 lg:col-4">
+          <div class="card mb-5 lg:mb-0 feature-card">
+            <span class="d-inline-flex flex-shrink-0 align-items-center justify-content-center mb-4 bg-primary rounded" style="width: 3rem; height: 3rem;">
+              <svg class="gi gi-flash-outline fs-2 text-white" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.193 2.415c.614-.843 1.946-.302 1.798.73h0l-.838 5.847 5.848.001a1 1 0 0 1 .868 1.496h0l-.06.092-8 11c-.613.843-1.946.303-1.8-.73h0l.837-5.86-5.847.001a1 1 0 0 1-.868-1.497h0l.06-.092zm-.752 4.43l-4.475 6.148 5.035.001a1 1 0 0 1 1 1.029h0l-.01.112-.432 3.015 4.478-6.157-5.036.001a1 1 0 0 1-1-1.03h0l.01-.112.43-3.007z"/>
+              </svg>
+            </span>
+            <h3 class="mb-3 fs-1">Lightweight</h3>
+            <p>Minimal footprint with only the essentials. Fast loading times and optimal performance for modern web applications.</p>
+          </div>
+        </div>
+        <div class="md:col-6 lg:col-4">
+          <div class="card mb-5 lg:mb-0 feature-card">
+            <span class="d-inline-flex flex-shrink-0 align-items-center justify-content-center mb-4 bg-success rounded" style="width: 3rem; height: 3rem;">
+              <svg class="gi gi-flash-outline fs-2 text-white" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.193 2.415c.614-.843 1.946-.302 1.798.73h0l-.838 5.847 5.848.001a1 1 0 0 1 .868 1.496h0l-.06.092-8 11c-.613.843-1.946.303-1.8-.73h0l.837-5.86-5.847.001a1 1 0 0 1-.868-1.497h0l.06-.092zm-.752 4.43l-4.475 6.148 5.035.001a1 1 0 0 1 1 1.029h0l-.01.112-.432 3.015 4.478-6.157-5.036.001a1 1 0 0 1-1-1.03h0l.01-.112.43-3.007z"/>
+              </svg>
+            </span>
+            <h3 class="mb-3 fs-1">Customizable</h3>
+            <p>Built with SCSS variables and mixins. Easily customize colors, spacing, and components to match your brand.</p>
+          </div>
+        </div>
+        <div class="lg:col-4">
+          <div class="card feature-card">
+            <span class="d-inline-flex flex-shrink-0 align-items-center justify-content-center mb-4 bg-danger rounded" style="width: 3rem; height: 3rem;">
+              <svg class="gi gi-flash-outline fs-2 text-white" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.193 2.415c.614-.843 1.946-.302 1.798.73h0l-.838 5.847 5.848.001a1 1 0 0 1 .868 1.496h0l-.06.092-8 11c-.613.843-1.946.303-1.8-.73h0l.837-5.86-5.847.001a1 1 0 0 1-.868-1.497h0l.06-.092zm-.752 4.43l-4.475 6.148 5.035.001a1 1 0 0 1 1 1.029h0l-.01.112-.432 3.015 4.478-6.157-5.036.001a1 1 0 0 1-1-1.03h0l.01-.112.43-3.007z"/>
+              </svg>
+            </span>
+            <h3 class="mb-3 fs-1">Responsive</h3>
+            <p>Mobile-first design with responsive utilities. Build interfaces that work perfectly on any device or screen size.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Start -->
+  <div class="py-6" style="background-color: var(--light-100);">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2 class="display-5 mb-4">Quick Start</h2>
+          <p class="fs-3 mb-4">Get started with Grayshift in seconds</p>
+          <div class="card mb-4">
+            <h3 class="fs-1 mb-3">1. Download or Clone</h3>
+            <p class="mb-3">Download the latest release or clone the repository:</p>
+            <pre style="background-color: var(--dark-500); color: white; padding: 1rem; border-radius: 0.5rem; overflow-x: auto;"><code>git clone https://github.com/yanchokraev/grayshift.git</code></pre>
+          </div>
+          <div class="card mb-4">
+            <h3 class="fs-1 mb-3">2. Include CSS and JS</h3>
+            <p class="mb-3">Add the following to your HTML:</p>
+            <pre style="background-color: var(--dark-500); color: white; padding: 1rem; border-radius: 0.5rem; overflow-x: auto;"><code>&lt;link rel="stylesheet" href="path/to/grayshift.min.css"&gt;
+&lt;script src="path/to/grayshift.min.js"&gt;&lt;/script&gt;</code></pre>
+          </div>
+          <div class="card">
+            <h3 class="fs-1 mb-3">3. Start Building</h3>
+            <p class="mb-3">Use Grayshift components in your HTML:</p>
+            <pre style="background-color: var(--dark-500); color: white; padding: 1rem; border-radius: 0.5rem; overflow-x: auto;"><code>&lt;button class="btn btn-primary"&gt;Click Me&lt;/button&gt;</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Documentation Sections -->
+  <div class="py-6">
+    <div class="container">
+      <h2 class="display-5 mb-5 text-center">Explore Documentation</h2>
+      <div class="row">
+        <div class="md:col-6 mb-4">
+          <div class="card h-100">
+            <h3 class="fs-1 mb-3">Getting Started</h3>
+            <p class="mb-4">Learn the basics of Grayshift, including installation, file structure, and build tools.</p>
+            <a href="getting-started/introduction.html" class="d-flex">
+              Read More
+              <svg class="gi gi-chevron-right fs-3" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.293 7.293a1 1 0 00-.083 1.32l.083.094L12.585 12l-3.292 3.293a1 1 0 00-.083 1.32l.083.094a1 1 0 001.32.083l.094-.083 4-4a1 1 0 00.083-1.32l-.083-.094-4-4a1 1 0 00-1.414 0z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="md:col-6 mb-4">
+          <div class="card h-100">
+            <h3 class="fs-1 mb-3">Components</h3>
+            <p class="mb-4">Discover all available UI components including buttons, cards, forms, navbars, modals, and more.</p>
+            <a href="components/buttons.html" class="d-flex">
+              Browse Components
+              <svg class="gi gi-chevron-right fs-3" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.293 7.293a1 1 0 00-.083 1.32l.083.094L12.585 12l-3.292 3.293a1 1 0 00-.083 1.32l.083.094a1 1 0 001.32.083l.094-.083 4-4a1 1 0 00.083-1.32l-.083-.094-4-4a1 1 0 00-1.414 0z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="md:col-6 mb-4">
+          <div class="card h-100">
+            <h3 class="fs-1 mb-3">Layout</h3>
+            <p class="mb-4">Master the grid system, containers, and layout utilities for building responsive designs.</p>
+            <a href="layout/containers.html" class="d-flex">
+              Learn Layout
+              <svg class="gi gi-chevron-right fs-3" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.293 7.293a1 1 0 00-.083 1.32l.083.094L12.585 12l-3.292 3.293a1 1 0 00-.083 1.32l.083.094a1 1 0 001.32.083l.094-.083 4-4a1 1 0 00.083-1.32l-.083-.094-4-4a1 1 0 00-1.414 0z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="md:col-6 mb-4">
+          <div class="card h-100">
+            <h3 class="fs-1 mb-3">Utilities</h3>
+            <p class="mb-4">Explore helper classes and utilities for spacing, typography, colors, and more.</p>
+            <a href="utilities/helpers.html" class="d-flex">
+              View Utilities
+              <svg class="gi gi-chevron-right fs-3" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.293 7.293a1 1 0 00-.083 1.32l.083.094L12.585 12l-3.292 3.293a1 1 0 00-.083 1.32l.083.094a1 1 0 001.32.083l.094-.083 4-4a1 1 0 00.083-1.32l-.083-.094-4-4a1 1 0 00-1.414 0z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="py-5" style="background-color: var(--dark-500); color: white;">
+    <div class="container">
+      <div class="row">
+        <div class="md:col-6 mb-4 md:mb-0">
+          <h4 class="mb-3">Grayshift</h4>
+          <p>A lightweight front-end component library for developing fast and powerful web interfaces.</p>
+          <p class="mt-3">Licensed under <a href="https://opensource.org/licenses/mit-license.php" style="color: white;">MIT License</a></p>
+        </div>
+        <div class="md:col-6">
+          <div class="row">
+            <div class="col-6">
+              <h5 class="mb-3">Documentation</h5>
+              <ul class="list-unstyled">
+                <li class="mb-2"><a href="getting-started/introduction.html" style="color: white;">Getting Started</a></li>
+                <li class="mb-2"><a href="components/buttons.html" style="color: white;">Components</a></li>
+                <li class="mb-2"><a href="layout/containers.html" style="color: white;">Layout</a></li>
+                <li class="mb-2"><a href="utilities/helpers.html" style="color: white;">Utilities</a></li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <h5 class="mb-3">Resources</h5>
+              <ul class="list-unstyled">
+                <li class="mb-2"><a href="examples/showcase.html" style="color: white;">Examples</a></li>
+                <li class="mb-2"><a href="https://github.com/yanchokraev/grayshift" style="color: white;">GitHub</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4 pt-4" style="border-top: 1px solid rgba(255,255,255,0.1);">
+        <div class="col text-center">
+          <p class="mb-0">&copy; 2019-2021 Grayshift. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/grayshift.min.js"></script>
+</body>
+</html>
